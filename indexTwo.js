@@ -4,8 +4,7 @@ let thePlayers = ['X'];
 let won = false;
 
 function player(board) {
-    
-    if (board.innerText != 'play here' || won) {
+    if ( board.innerText != 'play here' || won ) {
          return;
     }
 
@@ -52,53 +51,55 @@ function winningLine(firstMatch, secondMatch, thirdMatch) {
      
      let str = 'play here';
 
-     if(firstMatch != str && firstMatch === secondMatch && secondMatch === thirdMatch) {
+     if ( firstMatch != str && firstMatch === secondMatch && secondMatch === thirdMatch ) {
           alert('WINNER!!! :) The game will restart in 3 seconds.');
          won = true;
-          
-          if (firstMatch === one && secondMatch === two && thirdMatch === three) {
+         
+          //break statment can be used instead of if, else if and else.
+         //Colour highlights the winning row.
+          if ( firstMatch === one && secondMatch === two && thirdMatch === three ) {
                document.getElementById(1).style.backgroundColor = 'yellow';
                document.getElementById(2).style.backgroundColor = 'yellow';
                document.getElementById(3).style.backgroundColor = 'yellow';
                p = document.querySelector('p');
                p.textContent = 'WINNER!!!';
-          } else if (firstMatch === four && secondMatch === five && thirdMatch === six) {
+          } else if ( firstMatch === four && secondMatch === five && thirdMatch === six ) {
                document.getElementById(4).style.backgroundColor = 'yellow';
                document.getElementById(5).style.backgroundColor = 'yellow';
                document.getElementById(6).style.backgroundColor = 'yellow'; 
                p = document.querySelector('p');
                p.textContent = 'WINNER!!!';
-          } else if (firstMatch === seven && secondMatch === eight && thirdMatch === nine) {
+          } else if ( firstMatch === seven && secondMatch === eight && thirdMatch === nine ) {
                document.getElementById(7).style.backgroundColor = 'yellow';
                document.getElementById(8).style.backgroundColor = 'yellow';
                document.getElementById(9).style.backgroundColor = 'yellow';
                p = document.querySelector('p');
                p.textContent = 'WINNER!!!';
-          } else if (firstMatch === one && secondMatch === four && thirdMatch === seven) {
+          } else if ( firstMatch === one && secondMatch === four && thirdMatch === seven ) {
                document.getElementById(1).style.backgroundColor = 'red';
                document.getElementById(4).style.backgroundColor = 'red';
                document.getElementById(7).style.backgroundColor = 'red';
                p = document.querySelector('p');
                p.textContent = 'WINNER!!!';
-          } else if (firstMatch === two && secondMatch === five && thirdMatch === eight) {
+          } else if ( firstMatch === two && secondMatch === five && thirdMatch === eight ) {
                document.getElementById(2).style.backgroundColor = 'red';
                document.getElementById(5).style.backgroundColor = 'red';
                document.getElementById(8).style.backgroundColor = 'red';
                p = document.querySelector('p');
                p.textContent = 'WINNER!!!'; 
-          } else if (firstMatch === three && secondMatch === six && thirdMatch === nine) {
+          } else if ( firstMatch === three && secondMatch === six && thirdMatch === nine ) {
                document.getElementById(3).style.backgroundColor = 'red';
                document.getElementById(6).style.backgroundColor = 'red';
                document.getElementById(9).style.backgroundColor = 'red';
                p = document.querySelector('p');
                p.textContent = 'WINNER!!!';
-          } else if (firstMatch === one && secondMatch === five && thirdMatch === nine) {
+          } else if ( firstMatch === one && secondMatch === five && thirdMatch === nine ) {
                document.getElementById(1).style.backgroundColor = 'blue';
                document.getElementById(5).style.backgroundColor = 'blue';
                document.getElementById(9).style.backgroundColor = 'blue';
                p = document.querySelector('p');
                p.textContent = 'WINNER!!!';
-          } else if (firstMatch === three && secondMatch === five && thirdMatch === seven) {
+          } else if ( firstMatch === three && secondMatch === five && thirdMatch === seven ) {
                document.getElementById(3).style.backgroundColor = 'blue';
                document.getElementById(5).style.backgroundColor = 'blue';
                document.getElementById(7).style.backgroundColor = 'blue';
@@ -109,7 +110,7 @@ function winningLine(firstMatch, secondMatch, thirdMatch) {
                return;
           }
 
-          if (won == true) {
+          if ( won == true ) {
                setTimeout(() => window.location.reload(), 3000);
                }
      }
