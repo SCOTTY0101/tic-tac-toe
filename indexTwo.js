@@ -1,4 +1,5 @@
 //tic tac toe.
+//variables in the global scope.
 
 let thePlayers = ['X'];
 let won = false;
