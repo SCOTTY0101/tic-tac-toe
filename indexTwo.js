@@ -113,8 +113,7 @@ function winningLine(firstMatch, secondMatch, thirdMatch) {
 
           if ( won == true ) {
                setTimeout(() => window.location.reload(), 3000);
-               }
+          }
      }
-     
- 
+      
 };
