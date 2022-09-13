@@ -16,7 +16,7 @@ function player(board) {
 
     board.innerText === 'X' ? p.textContent = 'Player is X' : p.textContent = 'Player is O';
 
-     boardSquares();
+    boardSquares();
 };
 
 function boardSquares() {
@@ -54,10 +54,10 @@ function winningLine(firstMatch, secondMatch, thirdMatch) {
 
      if ( firstMatch != str && firstMatch === secondMatch && secondMatch === thirdMatch ) {
           alert('WINNER!!! :) The game will restart in 3 seconds.');
-         won = true;
+          won = true;
          
           //break statment can be used instead of if, else if and else.
-         //Colour highlights the winning row.
+          //Colour highlights the winning rows.
           if ( firstMatch === one && secondMatch === two && thirdMatch === three ) {
                document.getElementById(1).style.backgroundColor = 'yellow';
                document.getElementById(2).style.backgroundColor = 'yellow';
@@ -110,7 +110,8 @@ function winningLine(firstMatch, secondMatch, thirdMatch) {
                firstMatch === str && secondMatch === str && thirdMatch === str;
                return;
           }
-
+         
+          //reloads the page 3 seconds after the win.
           if ( won == true ) {
                setTimeout(() => window.location.reload(), 3000);
           }
